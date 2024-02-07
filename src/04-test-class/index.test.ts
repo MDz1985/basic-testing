@@ -1,5 +1,10 @@
 // Uncomment the code below and write your tests
-import { getBankAccount, InsufficientFundsError, SynchronizationFailedError, TransferFailedError } from '.';
+import {
+  getBankAccount,
+  InsufficientFundsError,
+  SynchronizationFailedError,
+  TransferFailedError,
+} from '.';
 
 describe('BankAccount', () => {
   const initialBalance = 777;

@@ -3,6 +3,18 @@ import { throttledGetDataFromApi } from './index';
 import axios from 'axios';
 
 describe('throttledGetDataFromApi', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+  });
+
+  beforeEach(() => {
+    jest.advanceTimersByTime(5000);
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   test('should create instance with provided base url', async () => {
     const baseURL = 'https://jsonplaceholder.typicode.com';
     const relativePath = '/posts/1';
